@@ -25,6 +25,8 @@ public class Main extends lista_seq {
             op = sc.nextInt();
 
             switch (op){
+
+                //verificar o estado da lista -- cheia/vazia/incompleta
                 case 1: {
                     if(array.cheia() == true){
                         System.out.println("A lista está cheia ");
@@ -38,12 +40,15 @@ public class Main extends lista_seq {
                     break;
 
                 }
+                //verificar o tamanho da lista
                 case 2:{
                     System.out.println("Tamanho atual da lista: " +  array.tamanho() + " elementos");
                     break;
 
                 }
+
                 case 3:{
+                    //Menu de modificação de elementos
                     int op2;
                     System.out.println("---- Modificando elementos ----");
                     System.out.println("Escolha uma opção:");
@@ -52,7 +57,7 @@ public class Main extends lista_seq {
                     System.out.println("3 - Remover um elemento");
 
                     op2 = sc.nextInt();
-
+                    //modificar elemento existente
                     if(op2 == 1){
                         System.out.println("Insira novo valor do elemento: ");
                         dado = sc.nextInt();
@@ -60,6 +65,7 @@ public class Main extends lista_seq {
                         pos = sc.nextInt();
                         array.trocaValor(pos, dado);
 
+                    //inserir novo elemento
                     }else if(op2 == 2){
                         System.out.println("Insira valor do elemento: ");
                         dado = sc.nextInt();
@@ -67,6 +73,7 @@ public class Main extends lista_seq {
                         pos = sc.nextInt();
                         array.insere(pos, dado);
 
+                    //remover um elemento
                     }else if(op2 == 3){
                         System.out.println("Insira a posição do elemento que deseja remover");
                         pos = sc.nextInt();
@@ -85,6 +92,7 @@ public class Main extends lista_seq {
                     break;
 
                 }
+                //mostrar a lista
                 case 4:{
                     array.show();
                     break;

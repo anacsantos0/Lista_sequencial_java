@@ -18,7 +18,9 @@ public class testes_lista_seq extends lista_seq {
         System.out.println("verif tamanho apos mudança: " + listaSeq_01.getTamAtual());
         System.out.println("\n----------LISTA--------- \n");
         listaSeq_01.show();
+        listaSeq_01.trocaValor(6, 33);
         listaSeq_01.trocaValor(2, 33);
+        listaSeq_01.trocaValor(4, 33);
         System.out.println("\n----------LISTA--------- \n");
         listaSeq_01.show();
 
